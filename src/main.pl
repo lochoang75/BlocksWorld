@@ -51,7 +51,8 @@ poss(stack(X,Y),S):-
 poss(move(X,Y,Z),S):-
     holds(on(X,Y),S),                      %avoide to move to the same place it was
     holds(clear(X),S),                     
-    holds(clear(Z),S).
+    holds(clear(Z),S),
+    X\=Z.
 
 %UNSTACK
 %REM_Effects
